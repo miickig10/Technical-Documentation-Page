@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Technical Documentation Page</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <section class="container">
+        <header>
+            <nav id="navbar">
+
+              <header> JS DOCUMENTACIÓN </header>
+              
+                <a href="#Introducción" class="nav-link">Introducción</a>
+              <a href="#JavaScript_y_Java" class="nav-link">JavaScript y Java</a>
+                <a href="#JavaScript_variables" class="nav-link">JavaScript variables</a>
+              <a href="#Declaración_de_variables" class="nav-link">Declaración de Variables</a>
+                <a href="#Variables_Globales" class="nav-link">Variables Globales</a>
+                <a href="#Constantes" class="nav-link">Constantes</a>
+                <a href="#Referencia" class="nav-link"> Referencia</a>
+           
+                
+            </nav>
+
+        </header>
+
+        <main  id="main-doc">
+
+            <section class="main-section" id="Introducción">
+                <header>Introducción</header>
+                <p>JavaScript es un lenguaje de programación multiplataforma orientado a objetos. Es un lenguaje ligero que se encuentra dentro de un entorno, por ejemplo, un navegador web. JavaScript se puede conectar a los objetos de su entorno para proporcionar control programático sobre ellos.</p>
+                <p>JavaScript contiene una biblioteca estándar de objetos, como Array, Date y Math, y un conjunto básico de elementos del lenguaje como operadores, estructuras de control y declaraciones. Core JavaScript se puede extender para una variedad de propósitos completándolo con objetos adicionales; por ejemplo:</p>
+                <li>JavaScript del lado del cliente proporciona objetos para controlar un navegador y su Modelo de objetos de documento (DOM). Por ejemplo, las extensiones del lado del cliente permiten que una aplicación coloque elementos en un formulario HTML y responda a eventos del usuario, como clics del mouse, ingreso de formularios y navegación de página.</li>
+                <li>JavaScript del lado del servidor amplía el lenguaje central al proporcionar objetos relevantes para ejecutar JavaScript en un servidor. Por ejemplo, las extensiones del lado del servidor permiten que una aplicación se comunique con una base de datos, brinde continuidad de información de una invocación a otra de la aplicación o realice manipulaciones de archivos en un servidor.</li>
+
+            </section>
+
+            <section class="main-section" id="JavaScript_y_Java">
+                <header>JavaScript y Java</header>
+                <p>JavaScript y Java son similares en algunos aspectos, pero fundamentalmente diferentes en otros. El lenguaje JavaScript se parece a Java, pero no tiene la escritura estática ni la verificación de tipo fuerte de Java. JavaScript sigue la mayoría de las sintaxis de expresión de Java, convenciones de nomenclatura y construcciones básicas de flujo de control, que fue la razón por la que se cambió el nombre de LiveScript a JavaScript.</p>
+                <p>A diferencia del sistema de clases en tiempo de compilación de Java creado por declaraciones, JavaScript admite un sistema de tiempo de ejecución basado en una pequeña cantidad de tipos de datos que representan valores numéricos, booleanos y de cadena. JavaScript tiene un modelo de objetos basado en prototipos en lugar del modelo de objetos basado en clases más común. El modelo basado en prototipos proporciona herencia dinámica; es decir, lo que se hereda puede variar para objetos individuales. JavaScript también admite funciones sin requisitos declarativos especiales. Las funciones pueden ser propiedades de objetos, ejecutándose como métodos de tipo impreciso.</p>
+            </section>
+
+            <section class="main-section" id="JavaScript_variables">
+                <header>JavaScript Variables</header>
+                <p>Utiliza variables como nombres simbólicos para valores en su aplicación. Los nombres de las variables, llamados identificadores, se ajustan a ciertas reglas.</p>
+                <p>Un identificador de JavaScript debe comenzar con una letra, un guión bajo (_) o un signo de dólar ($); los caracteres siguientes también pueden ser dígitos (0-9). Como JavaScript distingue entre mayúsculas y minúsculas, las letras incluyen los caracteres de la "A" a la "Z" (mayúsculas) y los caracteres de la "a" a la "z" (minúsculas).</p>
+            </section>
+
+            <section class="main-section" id="Declaración_de_variables">
+                <header>Declaración de Variables</header>
+                <p>Con JavaScript podemos declarar variables de 3 formas: </p>
+                <li>Con la palabra clave "var". Por ejemplo</li>
+                <code>x = 42</code>
+                <li>Simplemente asignándole un valor.</li>
+                <code>x = 42</code>
+                <li>Con la palabra clave "let"</li>
+                <code>let y = 13</code>
+            </section>
+
+            <section class="main-section" id="Variables_Globales">
+                <header>Variables Globales</header>
+                <p>Las variables globales son de hecho propiedades del objeto global. En las páginas web, el objeto global es window, por lo que puede establecer y acceder a variables globales utilizando la sintaxis window.variable.</p>
+                <p>En consecuencia, puede acceder a las variables globales declaradas en una ventana o marco desde otra ventana o marco (window or frame) especificando el nombre de la ventana o marco. Por ejemplo, si se declara una variable llamada phoneNumber en un documento, puede hacer referencia a esta variable desde un iframe como parent.phoneNumber.</p>
+            </section>
+
+            <section class="main-section" id="Constantes">
+                <header>Constantes</header>
+
+                <p>Puede crear una constante de solo lectura con nombre con la palabra clave "const". La sintaxis de un identificador de constante es la misma que la de un identificador de variable: debe comenzar con una letra, un subrayado o un signo de dólar y puede contener caracteres alfabéticos, numéricos o de subrayado.</p>
+
+                <code>const PI = 3.14;</code>
+
+                <p>Una constante no puede cambiar el valor a través de la asignación o volver a declararse mientras se ejecuta el script. Tiene que inicializarse a un valor. Las reglas de alcance para las constantes son las mismas que las de las variables de alcance de bloque let. Si se omite la palabra clave const, se supone que el identificador representa una variable. No puede declarar una constante con el mismo nombre que una función o variable en el mismo ámbito. Por ejemplo:</p>
+                 
+
+                <div class="code1">
+                    <code>// THIS WILL CAUSE AN ERROR function f() {}; const f = 5; //  </code>
+                </div>
+                
+
+                <p>Sin embargo, los atributos de los objetos no están protegidos, por lo que la siguiente instrucción se ejecuta sin problemas<p>
+                <div class="code1">
+                    <code>const MY_OBJECT = {"key": "value"}; MY_OBJECT.key = "otherValue";</code>
+                </div>
+                
+
+            </section>
+
+            <section class="main-section" id="Referencia">
+                <header>Referencia</header>
+                <p>Toda la documentación de esta pagina fue tomada de <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide" target="_blank">MDN</a></p>
+            </section>
+            
+        </main>
+        <footer></footer>
+    </section>
+</body>
+</html>
